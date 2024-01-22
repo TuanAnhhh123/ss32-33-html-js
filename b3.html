@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nhapThongTinSinhVien() {
+        let id = prompt("Nhập ID của sinh viên:");
+        let name = prompt("Nhập tên của sinh viên:");
+        return { id, name };
+      }
+
+      function chinh() {
+        let soLuongSinhVien = prompt("Nhập số lượng sinh viên:");
+        let mangSinhVien = [];
+
+        for (let i = 0; i < soLuongSinhVien; i++) {
+          console.log(`Nhập thông tin cho sinh viên thứ ${i + 1}:`);
+          let sinhVien = nhapThongTinSinhVien();
+          mangSinhVien.push(sinhVien);
+        }
+
+        console.log("Danh sách sinh viên:");
+        for (let i = 0; i < mangSinhVien.length; i++) {
+          console.log(`Sinh viên ${i + 1} - ID: ${mangSinhVien[i].id}, Tên: ${mangSinhVien[i].name}`);
+        }
+      }
+
+      chinh();
+    </script>
+  </body>
+</html>

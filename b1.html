@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Information() {
+        this.id = "";
+        this.name = "";
+        this.phone = "";
+        this.address = "";
+      }
+      function getInputAndSetInfo(in4Object) {
+        in4Object.id = prompt("Nhập ID:");
+        in4Object.name = prompt("Nhập tên:");
+        in4Object.phone = prompt("Nhập số điện thoại:");
+        in4Object.address = prompt("Nhập địa chỉ:");
+      }
+
+      function printInfo(in4Object) {
+        console.log("Thông tin cá nhân:");
+        console.log("ID: " + in4Object.id);
+        console.log("Tên: " + in4Object.name);
+        console.log("Số điện thoại: " + in4Object.phone);
+        console.log("Địa chỉ: " + in4Object.address);
+      }
+
+      var myInfo = new Information();
+
+      getInputAndSetInfo(myInfo);
+
+      printInfo(myInfo);
+    </script>
+  </body>
+</html>

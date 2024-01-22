@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myInformation = {
+        id: 1,
+        name: "Tuấn Anh",
+        phone: "123-456-7890",
+        address: "Bắc Ninh-123",
+      };
+
+      console.log("Thông tin trước khi chỉnh sửa:", myInformation);
+
+      delete myInformation.address;
+
+      myInformation.email = "tuananh@gmail.com";
+
+      console.log("Thông tin sau khi chỉnh sửa:", myInformation);
+    </script>
+  </body>
+</html>

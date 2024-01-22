@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        constructor(id, name, price) {
+          this.id = id;
+          this.name = name;
+          this.price = price;
+        }
+      }
+
+      function sortProductsByPrice(products) {
+        products.sort((a, b) => a.price - b.price);
+
+        for (const product of products) {
+          console.log(
+            `ID: ${product.id}, Name: ${product.name}, Price: ${product.price}`
+          );
+        }
+      }
+
+      // Example usage:
+      let products = [
+        new Product(1, "iPhone 12", 20000000),
+        new Product(2, "iPhone 11", 10000000),
+        new Product(3, "samsung note 10", 500000000),
+        // Thêm các sản phẩm khác nếu cần
+      ];
+
+      sortProductsByPrice(products);
+    </script>
+  </body>
+</html>

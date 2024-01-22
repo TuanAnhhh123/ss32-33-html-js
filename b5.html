@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Book(author, name) {
+        this.author = author;
+        this.name = name;
+      }
+
+      function timSachTheoTacGia(mangSach, tenTacGia) {
+        for (let i = 0; i < mangSach.length; i++) {
+          if (mangSach[i].author.toLowerCase() === tenTacGia.toLowerCase()) {
+            return mangSach[i];
+          }
+        }
+        return null;
+      }
+
+      function main() {
+        let mangSach = [
+          new Book("Dale Carnegie", "Sách Đắc nhân tâm"),
+          new Book("Paulo Coelho", "Sách Nhà giả kim"),
+          new Book(
+            "Mari Tamagawa",
+            "Sách Mặc kệ thiên hạ, sống như người Nhật"
+          ),
+        ];
+
+        let tenTacGia = prompt("Nhập tên tác giả cần tìm kiếm:");
+
+        let sachTimDuoc = timSachTheoTacGia(mangSach, tenTacGia);
+
+        if (sachTimDuoc) {
+          console.log(
+            `Sách được tìm thấy - Tác giả: ${sachTimDuoc.author}, Tên sách: ${sachTimDuoc.name}`
+          );
+        } else {
+          console.log("Không tìm thấy sách.");
+        }
+      }
+
+      main();
+      function Book(author, name) {
+        this.author = author;
+        this.name = name;
+      }
+
+      function timSachTheoTacGia(mangSach, tenTacGia) {
+        for (let i = 0; i < mangSach.length; i++) {
+          if (mangSach[i].author.toLowerCase() === tenTacGia.toLowerCase()) {
+            return mangSach[i];
+          }
+        }
+        return null;
+      }
+
+      function main() {
+        let mangSach = [
+          new Book("Dale Carnegie", "Sách Đắc nhân tâm"),
+          new Book("Paulo Coelho", "Sách Nhà giả kim"),
+          new Book(
+            "Mari Tamagawa",
+            "Sách Mặc kệ thiên hạ, sống như người Nhật"
+          ),
+        ];
+
+        let tenTacGia = prompt("Nhập tên tác giả cần tìm kiếm:");
+
+        let sachTimDuoc = timSachTheoTacGia(mangSach, tenTacGia);
+
+        if (sachTimDuoc) {
+          console.log(
+            `Sách được tìm thấy - Tác giả: ${sachTimDuoc.author}, Tên sách: ${sachTimDuoc.name}`
+          );
+        } else {
+          console.log("Không tìm thấy sách.");
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>
